@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @{
+        string from = "Unknown", message = "Empty Message";
+        if (!string.IsNullOrEmpty(Request["From"]))
+        {
+            from = Request["From"];
+        }
+
+        if (!string.IsNullOrEmpty(Request["Message"]))
+        {
+            message = Request["Message"];
+        }
+    }
+
+    <p>Recieved text <br />From: @from <br />Message: @message<br /></p>
+
+</body>
+</html>
